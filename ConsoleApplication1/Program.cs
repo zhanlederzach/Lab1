@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Lab1
-{
+{//added some comment
     class Program
     {
         static bool IsPrime(string x)
