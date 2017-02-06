@@ -13,22 +13,27 @@ namespace Example3
     {
         public int age;
         public string name;
+        public int course;
 
+        // консттруктор студента
         public Student()
         {
             age = 18;
             name = "Sam Red";
+            course = 2;
         }
 
-        public Student(string name, int age)
+        // конструктор студента с тремя аргументами
+        public Student(string name, int age, int course)
         {
             this.age = age;
             this.name = name;
+            this.course = course;
         }
-        
+        // переписываем метод в строку
         public override string ToString()
         {
-            return age + " " + name;
+            return age + " " + name + " " + course;
         }
     }
 
@@ -36,7 +41,16 @@ namespace Example3
     {
         static void Main(string[] args)
         {
-            Student s = new Student("John", 25);
+            // создаем объект класса студент
+
+            //Student s = new Student("John", 25, 2);
+
+            Student s = new Student();
+
+            s.name = Console.ReadLine();
+            s.age = int.Parse(Console.ReadLine());
+            s.course = int.Parse(Console.ReadLine());
+
             Console.WriteLine(s.ToString());
         }
     }
